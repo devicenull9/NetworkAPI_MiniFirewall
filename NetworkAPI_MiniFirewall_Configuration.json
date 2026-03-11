@@ -1,6 +1,40 @@
 {
     "networkapi_minifirewall": {
         "allow_mode": false,
-        "rule_table": []
+        "rule_table": [
+            {
+                "ip_version": 4,
+                "ip_address": {
+                    "start": "0.0.0.0",
+                    "end": "255.255.255.255"
+                },
+                "protocol": 6,
+                "port_table": [
+                    80,
+                    443,
+                    8080
+                ]
+            },
+            {
+                "ip_version": 4,
+                "ip_address": {
+                    "start": "0.0.0.0",
+                    "end": "255.255.255.255"
+                },
+                "protocol": 17,
+                "port_table": [
+                    53,
+                    443
+                ]
+            },
+            {
+                "ip_version": 4,
+                "ip_address": {
+                    "start": "0.0.0.0",
+                    "end": "255.255.255.255"
+                },
+                "protocol": 1
+            }
+        ]
     }
 }
