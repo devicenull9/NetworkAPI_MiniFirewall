@@ -62,7 +62,7 @@ bool IsInPrefix(const uint8_t ip_address[16], const uint8_t prefix[16], uint8_t 
 
     if (remaining_bits > 0)
     {
-        uint8_t mask = (0xFF << (8 - remaining_bits)) & 0xFF;
+        uint8_t mask = (0xff << (8 - remaining_bits)) & 0xff;
         
         if ((ip_address[full_bytes] & mask) != (prefix[full_bytes] & mask))
             return false;
